@@ -1,0 +1,50 @@
+#body{
+    background-color: #3C3D40;
+}
+#top{
+    width:100vw;
+}
+#username{
+    position:relative;
+    display:block;
+    margin:25px;
+    width:50vw;
+    height:10vh;
+}
+#imagelink{
+    position:static;
+    display:inline-block;
+    margin:25px;
+    height:10vh;
+    width:40vw
+}
+#moviename{
+    position:relative;
+    margin:25px;
+    width:40vw;
+    height:10vh;
+}
+#comment{
+    position:relative;
+    display:block;
+    margin:25px;
+    width:50vw;
+    height:10vh;
+}
+#submit{
+    position:relative;
+    height:10vh;
+    width:25vw;
+    margin:25px;
+}
+#error{
+    height:5vh;
+    width:10vw;
+    font-family: "Verdana";
+}
+#bot{
+    height:20vh;
+    width:90vw;
+    position:relative;
+    transition:1s;
+}

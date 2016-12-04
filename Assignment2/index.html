@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>Left Panel</title>
+    </head>
+    
+   <style>
+       #body{
+           margin:0px;
+           
+       }
+       
+       #bg{
+           background-color: black;
+           width:100vw;
+           height:100vh;
+           transition: background-color 2s;
+       }
+       
+       #centerBlock{
+           position:absolute;
+           left:550px;
+           top:350px;
+           width:1030px;
+           height:520px;
+           padding: 40px;
+       }
+       #panel{
+           position:absolute;
+           background-color:black;
+           left:-400px;
+           width:420px;
+           height:800px;
+           transition: left 1s,background-color 2s;
+
+           
+       }
+       
+       #popout{
+           position:relative;
+           margin:0px;
+           height:800px;
+           width:25px;
+           float :right;
+           background-color: black;
+           transition: background-color 2s;
+       }
+       
+       #button2{
+           position:absolute;
+           float:right;
+           margin-top:350px;
+           width:23px;
+           height:70px;
+           transition: left 1s;
+           transition: background-color 2s;
+           
+       }
+           
+       
+       #menu{
+           position:relative;
+           margin:10px;
+           height:100px;
+           width:380px;
+           background-color: darkblue;
+       }
+       
+       #review{
+           position:relative;
+           margin:10px;
+           height:100px;
+           width:380px;
+           background-color: darkmagenta;
+       }
+       
+       #options{
+           position:relative;
+           margin:10px;
+           height:100px;
+           width:380px;
+           background-color: darkcyan;
+       }
+       
+       #layout{
+           position:relative;
+           margin:10px;
+           height:100px;
+           width:380px;
+           background-color: darkgreen;
+       }
+       
+       #contact{
+           position:relative;
+           margin:10px;
+           height:100px;
+           width:380px;
+           background-color: darkorange;
+       }
+       
+       #v2{
+           position:relative;
+           margin:10px;
+           height:100px;
+           width:380px;
+           background-color: darkred;
+       }
+       
+       #settings{
+           position:relative;
+           margin:10px;
+           height:100px;
+           width:380px;
+           background-color: darkturquoise;
+       }
+       
+       
+       #button{
+           position:fixed;
+           left:0px;
+           width:100px;
+           height:70px;
+           transition: left 1s;
+       }
+       
+       #createBox{
+           position:absolute;
+           left:-800px;
+           top: 250px;
+           right:0px;
+           transition: 0.5s;
+       }
+       
+       .imgthumb{
+           border-radius: 100px;
+           position:relative;
+           
+       }
+    
+    
+    
+    
+    
+    </style>
+    
+    
+    <body id = "body">
+        <div id = "bg">
+            <div id = "centerBlock"></div>
+            <div id = "createBox">
+            <button id="create">CREATE</button><br/>
+            <input type='text' placeholder='Message' id='msg' /><br/>
+            <input type='text' placeholder='Image' id='img' /><br/>
+            <input type='text' placeholder='H3 Text' id='h3' /><br/>
+            <button id="clear">Clear Body</button>
+                    </div>
+        <div id = "panel">
+            <div id = "popout">
+            <img id = "button2" src = "http://www.clker.com/cliparts/V/1/Z/A/h/U/left-arrow-right-md.png">
+                        </div>
+            <div id = "menu"></div>
+            <div id = "review"></div>
+            <div id = "options"></div>
+            <div id = "layout"></div>
+            <div id = "contact"></div>
+            <div id = "v2"></div>
+            <div id = "settings"></div>
+            
+            </div>
+            <img id = "button"src = "http://alexandstein.com/resources/images/icons/hamburger.png">
+        </div>
+
+    
+    </body>
+    
+    
+    <script>
+        var hamBut = document.getElementById("button");
+        
+        var panelIn = document.getElementById("panel");
+        var popout = document.getElementById("popout");
+        var popoutBut = document.getElementById("button2");
+        var menuBut = document.getElementById("menu");
+        var reviewBut = document.getElementById("review");
+        var optBut = document.getElementById("options");
+        var layBut = document.getElementById("layout");
+        var contBut = document.getElementById("contact");
+        var v2But = document.getElementById("v2");
+        var settBut = document.getElementById("settings");
+        
+        var bgChange = document.getElementById("bg");
+        var centerBlock = document.getElementById("centerBlock");
+        
+        var createBox = document.getElementById("createBox")
+        var createBut = document.getElementById("create");
+        var msgInput = document.getElementById("msg");
+        var imgInput = document.getElementById("img");
+        var h3Input = document.getElementById("h3");
+        var clearBut = document.getElementById("clear");
+        
+        
+        hamBut.onclick = function(){
+            panelIn.style.left = "0px";
+            hamBut.style.left = "400px";
+            
+            hamBut.onclick = function(){
+                panelIn.style.left = "-400px";
+                hamBut.style.left = "0px";
+                bg.style.backgroundColor = "black";
+                panelIn.style.backgroundColor = "black";
+                popoutBut.style.backgroundColor = "black";
+                popout.style.backgroundColor = "black";
+            }
+        }
+        
+        menuBut.onclick = function(){
+            bg.style.backgroundColor = "darkblue";
+            panelIn.style.backgroundColor = "darkblue";
+            popoutBut.style.backgroundColor = "darkblue";
+            popout.style.backgroundColor = "darkblue";
+        }
+        
+        popoutBut.onclick = function(){
+            createBox.style.left = "600px";
+            
+        }
+        reviewBut.onclick = function(){
+            bg.style.backgroundColor = "darkmagenta";
+            panelIn.style.backgroundColor = "darkmagenta";
+            popoutBut.style.backgroundColor = "darkmagenta";
+            popout.style.backgroundColor = "darkmagenta";
+        }
+        optBut.onclick = function(){
+            bg.style.backgroundColor = "darkcyan";
+            panelIn.style.backgroundColor = "darkcyan";
+            popoutBut.style.backgroundColor = "darkcyan";
+            popout.style.backgroundColor = "darkcyan";
+        }
+        layBut.onclick = function(){
+            bg.style.backgroundColor = "darkgreen";
+            panelIn.style.backgroundColor = "darkgreen";
+            popoutBut.style.backgroundColor = "darkgreen";
+            popout.style.backgroundColor = "darkgreen";
+        }
+        contBut.onclick = function(){
+            bg.style.backgroundColor = "darkorange";
+            panelIn.style.backgroundColor = "darkorange";
+            popoutBut.style.backgroundColor = "darkorange";
+            popout.style.backgroundColor = "darkorange";
+        }
+        v2But.onclick = function(){
+            bg.style.backgroundColor = "darkred";
+            panelIn.style.backgroundColor = "darkred";
+            popoutBut.style.backgroundColor = "darkred";
+            popout.style.backgroundColor = "darkred";
+        }
+        settBut.onclick = function(){
+            bg.style.backgroundColor = "darkturquoise";
+            panelIn.style.backgroundColor = "darkturquoise";
+            popoutBut.style.backgroundColor = "darkturquoise";
+            popout.style.backgroundColor = "darkturquoise";
+        }
+        createBut.onclick = function(){
+            
+            var newObj = document.createElement("div");
+            centerBlock.appendChild(newObj);
+            newObj.style.width = "100%";
+            newObj.style.height = "100px";
+            newObj.style.backgroundColor = "black";
+            newObj.style.display = "inline-block";
+            newObj.style.padding = "20px";
+            newObj.innerHTML = msgInput.value;
+            
+            
+            var newObj2 = document.createElement("h3");
+            newObj.appendChild(newObj2);
+            newObj2.innerHTML = h3Input.value;
+            newObj2.style.marginLeft= "100px";
+            newObj2.style.backgroundColor = "white";
+            
+            
+            var newObj3 = document.createElement("div");
+            newObj.appendChild(newObj3);
+            newObj3.style.width = "500px";
+            newObj3.style.height = "30px";
+            newObj3.style.marginLeft= "100px";
+            newObj3.style.backgroundColor = "red";
+            
+            var newImg = document.createElement("img");
+            newImg.src = imgInput.value;
+            newImg.style.right = "150px";
+            newImg.className = "imgthumb";
+            newObj2.appendChild(newImg);
+        }
+    
+        clearBut.onclick = function(){
+            centerBlock.innerHTML = "";
+        }
+    </script>
+</html>
