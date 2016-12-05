@@ -115,7 +115,15 @@
         position:static;
         }
     
+    .button{
+        margin-left:14vw;
+        background-color: darkred;
+        color:white;
+        height:40px;
+        width:100px;
+    })
     </style>
+    
     
     <body id = "body">
         <div id="top_banner">
@@ -134,9 +142,13 @@
             <div class="title_box">
                 <font face="verdana"><h2>The Night Bird</h2></font>
                 </div>
-            <img class = "img_port" src = "https://s-media-cache-ak0.pinimg.com/originals/38/25/da/3825da687990ec4abbe8b9d7ffb6f1c9.jpg">
-            <img class = "img_port" src = "https://s-media-cache-ak0.pinimg.com/originals/0d/31/77/0d317718322feb0c57f2c6a93d1f5a0c.jpg">
-            <img class = "img_port" src = "http://greenywallpapers.com/wallpapers/2/35302-abstract-art-hd-desktop-wallpapers-1920x1080.jpg">
+            <img id = "portimg1" class = "img_port" src = "https://s-media-cache-ak0.pinimg.com/originals/38/25/da/3825da687990ec4abbe8b9d7ffb6f1c9.jpg">
+            <img id = "portimg2" class = "img_port" src = "https://s-media-cache-ak0.pinimg.com/originals/0d/31/77/0d317718322feb0c57f2c6a93d1f5a0c.jpg">
+            <img id = "portimg3" class = "img_port" src = "http://greenywallpapers.com/wallpapers/2/35302-abstract-art-hd-desktop-wallpapers-1920x1080.jpg">
+            <button id="height_inc" class="button">Increase Height</button>
+            <button id="height_dec" class="button">Decrease Height</button>
+            <button id="width_inc" class="button">Increase Width</button>
+            <button id="width_dec" class="button">Decrease Width</button>
             
             </div>
         <div id="bio">
@@ -156,7 +168,49 @@
         </div>
         
         
+    <script>
+        var h_incBut = document.getElementById("height_inc");
+        var h_decBut = document.getElementById("height_dec");
+        var w_incBut = document.getElementById("width_inc");
+        var w_decBut = document.getElementById("width_dec");
         
+        var img1 = document.getElementById("portimg1");
+        var img2 = document.getElementById("portimg2");
+        var img3 = document.getElementById("portimg3");
+        
+        height = 30
+        width = 30
+        h_incBut.onclick = function(){
+            height = height + 2;
+            img1.style.height = height + "%";
+            img2.style.height = height + "%";
+            img3.style.height = height + "%";
+            
+        }
+        
+        h_decBut.onclick = function(){
+            height = height - 2;
+            img1.style.height = height + "%";
+            img2.style.height = height + "%";
+            img3.style.height = height + "%";
+        }
+        
+        w_incBut.onclick = function(){
+            width = width + 1;
+            img1.style.width = width + "%";
+            img2.style.width = width + "%";
+            img3.style.width = width + "%";
+            width = width + 1;
+        }
+        
+        w_decBut.onclick = function(){
+            width = width - 1;
+            img1.style.width = width + "%";
+            img2.style.width = width + "%";
+            img3.style.width = width + "%";
+        }
+        
+    </script>    
         
     </body>
 </html>
