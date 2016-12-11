@@ -9,7 +9,7 @@ $(document).ready(function(){
     var errDiv = document.getElementById("error")
     
     var userEx = /^[a-zA-Z0-9]{5,10}$/;
-    var linkEx = /^(http:|https:)[/][/][.a-zA-z0-9/_-]{3,40}(.jpg$|.png$|.gif$)/;
+    var linkEx = /^(http:|https:)[/][/][.a-zA-z0-9/_-]{3,200}(.jpg$|.png$|.gif$)/;
     var nameEx = /^[a-zA-z0-9/_-]{3,30}$/;
     
     check1 = 0;
@@ -94,6 +94,7 @@ $(document).ready(function(){
         user_str = inputUser.value;
             if(userEx.test(user_str)){
                 check1 = 1;  
+                errDiv.innerHTML = "";
             } else {
                 check1 = 0;
                 errDiv.innerHTML = "Incorrect Username";
@@ -113,6 +114,7 @@ $(document).ready(function(){
         img_str = imglink.value;
             if(linkEx.test(img_str)){
                 check2 = 1;
+                errDiv.innerHTML = "";
             } else {
                 check2 = 0;
                 errDiv.innerHTML = "Incorrect ImageLink";
@@ -132,6 +134,7 @@ $(document).ready(function(){
         movie_str = inputMovie.value;
             if(nameEx.test(movie_str)){
                 check3 = 1;
+                errDiv.innerHTML = "";
             } else {
                 check3 = 0;
                 errDiv.innerHTML = "Incorrect Movie Name";
